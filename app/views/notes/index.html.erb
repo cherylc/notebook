@@ -10,3 +10,7 @@
   </li>
 <% end %>
 </ul>
+
+<%= form_for(Note.new ) do |f| %>
+    <%= f.text_field :content, placeholder: 'Add a new aha! here' %>
+<% end %>
