@@ -1,23 +1,5 @@
-<h1>Listing notes</h1>
-
-<table>
-  <tr>
-    <th>Content</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<ul>
 <% @notes.each do |note| %>
-  <tr>
-    <td><%= note.content %></td>
-    <td><%= link_to 'Show', note %></td>
-    <td><%= link_to 'Edit', edit_note_path(note) %></td>
-    <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  <li><%= note.content %><a href="#"><img src="/assets/trash-can-icon.jpg" height="20" width="20"></a><a href="#"><img src="/assets/pencil.png" height="20" width="20"></a></li>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Note', new_note_path %>
+</ul>
