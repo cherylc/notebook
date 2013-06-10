@@ -9,3 +9,6 @@
 <%= form_for(Note.new, remote: true) do |f| %>
     <%= f.text_field :content, placeholder: 'Add a new aha! here' %>
 <% end %>
+
+<%= subscribe_to "/notes/new" %>
+<%= subscribe_to "/notes/destroy" %>
